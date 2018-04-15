@@ -30,6 +30,7 @@ import org.jetbrains.uast.ULiteralExpression;
 import org.jetbrains.uast.UastLiteralUtils;
 
 import java.util.Collections;
+import java.util.EnumSet;
 import java.util.List;
 
 /**
@@ -57,8 +58,7 @@ public class SampleCodeDetector extends Detector implements UastScanner {
             6,
             Severity.WARNING,
             new Implementation(
-                    SampleCodeDetector.class,
-                    Scope.JAVA_FILE_SCOPE));
+                    SampleCodeDetector.class, Scope.JAVA_FILE_SCOPE));
 
     @Override
     public List<Class<? extends UElement>> getApplicableUastTypes() {
